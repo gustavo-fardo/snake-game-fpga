@@ -1,0 +1,7 @@
+
+State Machine - |snake-game-fpga|sentido_sm:inst2|fstate
+Name fstate.dir fstate.esq fstate.baixo fstate.cima 
+fstate.cima 0 0 0 0 
+fstate.baixo 0 0 1 1 
+fstate.esq 0 1 0 1 
+fstate.dir 1 0 0 1 

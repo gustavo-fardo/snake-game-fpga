@@ -1,0 +1,55 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity sentido_mem is
+    Generic (
+        CLK_FREQ_HZ  : natural := 50_000_000; -- System clock frequency (e.g., 50MHz)
+        DEBOUNCE_MS  : natural := 20         -- Debounce time in milliseconds
+    );
+    Port (
+        clk       : in  std_logic; -- System clock
+        rst       : in  std_logic; 
+        btn    : in  std_logic; 
+        btn_out  : in  std_logic; 
+    );
+end sentido_mem;
+
+architecture Behavioral of sentido_mem is
+
+    -- Number of clock cycles needed for 20ms debounce
+    constant DEBOUNCE_CYCLES : natural := (CLK_FREQ_HZ / 1000) * DEBOUNCE_MS;
+
+    signal count_reg : unsigned(1 downto 0);
+
+    signal state        : std_logic; 
+
+	 signal debounce_cnt : natural range 0 to DEBOUNCE_CYCLES; 
+
+begin
+
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                count_reg         <= (others => '0');
+                debounce_cnt   <= 0;
+                state          <= '1';
+            else
+                -- Debouncing
+                
+                if btn /= state then
+                    debounce_cnt <= 0;
+                elsif debounce_cnt < DEBOUNCE_CYCLES then
+                    debounce_cnt <= debounce_cnt + 1;
+                else
+                    state <= btn;
+                end if;
+					 
+            end if;
+        end if;
+    end process;
+
+    btn_out <= state;
+
+end Behavioral;

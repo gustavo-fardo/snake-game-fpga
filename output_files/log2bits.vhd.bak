@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use work.log2bits.all;
+
+package log2bits is
+	function bits_needed(n : natural) return natural;
+end package;
+
+package body log2bits is
+	function bits_needed(n : natural) return natural is
+			  variable b : natural := 1;
+		 begin
+			  while (2**b) < n loop
+					b := b + 1;
+			  end loop;
+			  return b;
+		 end function;
+end package body;

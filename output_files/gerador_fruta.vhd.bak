@@ -1,0 +1,44 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity GeradorFruta is
+	 Generic (
+		  M : natural := 20;
+		  N : natural := 20
+	 )
+    Port (
+		  clk_gera : in std_logic;
+		  fruta_x : out std_logic;
+		  fruta_y : out std_logic
+    );
+end GeradorFruta;
+
+architecture Behavioral of GeradorFruta is
+
+    function rand_int(seed : integer) return integer is
+        variable x : integer := seed;
+    begin
+        x := (x * 1103515245 + 12345) mod 2147483648;
+        return x;
+    end function;
+
+    signal seed : integer := 42;
+begin
+    process(clk_gera)
+        variable rand_x : integer := seed;
+		  variable rand_y : integer := rand_int(seed);
+    begin
+		  if rising_edge(clk_gera) then
+			  seed <= rand_int(seed);
+			  rand_y := rand_int(seed) mod M;   
+			  seed <= rand_int(seed);
+			  rand_x := rand_int(seed) mod N;
+		  end if;
+		  
+		  fruta_x <= rand_x;
+		  fruta_y <= rand_y;
+      
+        wait;
+    end process;
+end Behavioral;

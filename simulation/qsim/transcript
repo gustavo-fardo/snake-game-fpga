@@ -1,0 +1,27 @@
+# do snake-game-fpga.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:29:47 on Nov 17,2025
+# vcom -work work snake-game-fpga.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity \snake-game-fpga\
+# -- Compiling architecture structure of \snake-game-fpga\
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "tdoutap" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "tmscore" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "tckcore" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "tdicore" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "corectl" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(1216): (vcom-1035) Formal port "ntdopinena" has OPEN or no actual associated with it.
+# ** Error: snake-game-fpga.vho(13891): VHDL Compiler exiting
+# End time: 18:29:47 on Nov 17,2025, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./snake-game-fpga.do line 3
