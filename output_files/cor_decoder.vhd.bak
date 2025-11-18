@@ -1,0 +1,46 @@
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+USE ieee.numeric_std.all;
+
+entity CorDecoder is
+	generic(
+		COR_BITS : in natural := 4; 
+	);
+   port( 
+      valor_pixel : in std_logic_vector (2 downto 0);
+		valor_verm : out std_logic_vector (COR_BITS-1 downto 0);
+		valor_verde : out std_logic_vector (COR_BITS-1 downto 0);
+		valor_azul : out std_logic_vector (COR_BITS-1 downto 0)
+ 	);
+end entity CorDecoder;
+
+architecture comportamento of CorDecoder is	
+
+constant zero : INTEGER := std_logic_vector(to_unsigned(0, COR_BITS); -- Componente de cor zerada
+constant full : INTEGER := std_logic_vector(to_unsigned(2**COR_BITS, COR_BITS); -- Componente de cor completa
+
+begin
+		process(clock)
+		begin
+			if valor_pixel = '00' then 	-- Fundo
+				valor_verm <= zero;
+				valor_verde <= zero;
+				valor_azul <= zero;
+			elsif valor_pixel = '01' then -- Cobra
+				valor_verm <= zero;
+				valor_verde <= full;
+				valor_azul <= zero;
+			elsif valor_pixel = '10' then -- Fruta
+				valor_verm <= full;
+				valor_verde <= zero;
+				valor_azul <= zero;
+			else 									-- Valor inesperado
+				valor_verm <= full;
+				valor_verde <= zero
+				valor_azul <= full;
+			end if;
+		
+		end process;
+		--	
+
+end comportamento;

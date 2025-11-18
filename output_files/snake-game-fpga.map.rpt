@@ -1,5 +1,5 @@
 Analysis & Synthesis report for snake-game-fpga
-Mon Nov 17 21:43:15 2025
+Tue Nov 18 17:49:23 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -26,21 +26,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  18. Source assignments for decoder7seg:inst8|altsyncram:altsyncram_component|altsyncram_57q3:auto_generated
  19. Source assignments for decoder7seg:inst29|altsyncram:altsyncram_component|altsyncram_57q3:auto_generated
  20. Source assignments for sld_signaltap:auto_signaltap_0
- 21. Parameter Settings for User Entity Instance: decoder7seg:inst4|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: debouncer:inst14
- 23. Parameter Settings for User Entity Instance: debouncer:inst18
- 24. Parameter Settings for User Entity Instance: decoder7seg:inst6|altsyncram:altsyncram_component
- 25. Parameter Settings for User Entity Instance: GeradorFruta:inst17
- 26. Parameter Settings for User Entity Instance: decoder7seg:inst8|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: decoder7seg:inst29|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: highscore_mem:inst28
- 29. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Signal Tap Logic Analyzer Settings
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Connections to In-System Debugging Instance "auto_signaltap_0"
- 35. Analysis & Synthesis Messages
+ 21. Parameter Settings for User Entity Instance: VGA_drvr:inst1
+ 22. Parameter Settings for User Entity Instance: CorDecoder:inst11
+ 23. Parameter Settings for User Entity Instance: decoder7seg:inst4|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: debouncer:inst14
+ 25. Parameter Settings for User Entity Instance: debouncer:inst18
+ 26. Parameter Settings for User Entity Instance: decoder7seg:inst6|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: GeradorFruta:inst17
+ 28. Parameter Settings for User Entity Instance: decoder7seg:inst8|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: decoder7seg:inst29|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: highscore_mem:inst28
+ 31. Parameter Settings for User Entity Instance: EnderecamentoSnake:inst10
+ 32. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Signal Tap Logic Analyzer Settings
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -66,7 +69,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 17 21:43:15 2025       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 18 17:49:23 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; snake-game-fpga                             ;
 ; Top-level Entity Name              ; snake-game-fpga                             ;
@@ -75,7 +78,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 499                                         ;
 ;     Dedicated logic registers      ; 469                                         ;
 ; Total registers                    ; 469                                         ;
-; Total pins                         ; 35                                          ;
+; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 928                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -193,10 +196,14 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; VGA_drvr.vhd                                                       ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/VGA_drvr.vhd                                                       ;             ;
 ; snake-game-fpga.bdf                                                ; yes             ; User Block Diagram/Schematic File            ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/snake-game-fpga.bdf                                                ;             ;
 ; debouncer.vhd                                                      ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/debouncer.vhd                                                      ;             ;
 ; output_files/gerador_fruta.vhd                                     ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd                                     ;             ;
 ; highscore_mem.vhd                                                  ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd                                                  ;             ;
+; EnderecamentoSnake.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/EnderecamentoSnake.vhd                                             ;             ;
+; output_files/cor_decoder.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd                                       ;             ;
+; output_files/snakeController.vhd                                   ; yes             ; User VHDL File                               ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd                                   ;             ;
 ; decoder7seg.vhd                                                    ; yes             ; Auto-Found Wizard-Generated File             ; C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/decoder7seg.vhd                                                    ;             ;
 ; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                       ;             ;
 ; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                ;             ;
@@ -283,15 +290,15 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 469                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 35                       ;
+; I/O pins                                    ; 49                       ;
 ; Total memory bits                           ; 928                      ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 296                      ;
-; Total fan-out                               ; 3301                     ;
-; Average fan-out                             ; 3.05                     ;
+; Total fan-out                               ; 3315                     ;
+; Average fan-out                             ; 2.98                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -300,7 +307,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                          ; Entity Name                                          ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+--------------+
-; |snake-game-fpga                                                                                                                        ; 499 (1)             ; 469 (0)                   ; 928         ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |snake-game-fpga                                                                                                                                                                                                                                                                                                                                                                                             ; snake-game-fpga                                      ; work         ;
+; |snake-game-fpga                                                                                                                        ; 499 (1)             ; 469 (0)                   ; 928         ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |snake-game-fpga                                                                                                                                                                                                                                                                                                                                                                                             ; snake-game-fpga                                      ; work         ;
 ;    |GeradorFruta:inst17|                                                                                                                ; 19 (19)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |snake-game-fpga|GeradorFruta:inst17                                                                                                                                                                                                                                                                                                                                                                         ; GeradorFruta                                         ; work         ;
 ;    |debouncer:inst14|                                                                                                                   ; 23 (23)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |snake-game-fpga|debouncer:inst14                                                                                                                                                                                                                                                                                                                                                                            ; debouncer                                            ; work         ;
 ;    |debouncer:inst18|                                                                                                                   ; 23 (23)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |snake-game-fpga|debouncer:inst18                                                                                                                                                                                                                                                                                                                                                                            ; debouncer                                            ; work         ;
@@ -422,21 +429,26 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+---------------------------------------+--------------------------------------------+
-; Register name                         ; Reason for Removal                         ;
-+---------------------------------------+--------------------------------------------+
-; GeradorFruta:inst17|fruta_x[3]        ; Merged with GeradorFruta:inst17|lfsr_x[4]  ;
-; GeradorFruta:inst17|fruta_x[2]        ; Merged with GeradorFruta:inst17|lfsr_x[3]  ;
-; GeradorFruta:inst17|fruta_x[1]        ; Merged with GeradorFruta:inst17|lfsr_x[2]  ;
-; GeradorFruta:inst17|fruta_x[0]        ; Merged with GeradorFruta:inst17|lfsr_x[1]  ;
-; GeradorFruta:inst17|fruta_y[3]        ; Merged with GeradorFruta:inst17|lfsr_y[4]  ;
-; GeradorFruta:inst17|fruta_y[2]        ; Merged with GeradorFruta:inst17|lfsr_y[3]  ;
-; GeradorFruta:inst17|fruta_y[1]        ; Merged with GeradorFruta:inst17|lfsr_y[2]  ;
-; GeradorFruta:inst17|lfsr_y[1]         ; Merged with GeradorFruta:inst17|fruta_y[0] ;
-; Total Number of Removed Registers = 8 ;                                            ;
-+---------------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++----------------------------------------+--------------------------------------------+
+; Register name                          ; Reason for Removal                         ;
++----------------------------------------+--------------------------------------------+
+; VGA_drvr:inst1|v_count[0..9]           ; Stuck at GND due to stuck port clear       ;
+; VGA_drvr:inst1|h_count[0..9]           ; Stuck at GND due to stuck port clear       ;
+; VGA_drvr:inst1|red[0..3]               ; Stuck at GND due to stuck port clear       ;
+; VGA_drvr:inst1|green[0..3]             ; Stuck at GND due to stuck port clear       ;
+; VGA_drvr:inst1|blue[0..3]              ; Stuck at GND due to stuck port clear       ;
+; GeradorFruta:inst17|fruta_x[3]         ; Merged with GeradorFruta:inst17|lfsr_x[4]  ;
+; GeradorFruta:inst17|fruta_x[2]         ; Merged with GeradorFruta:inst17|lfsr_x[3]  ;
+; GeradorFruta:inst17|fruta_x[1]         ; Merged with GeradorFruta:inst17|lfsr_x[2]  ;
+; GeradorFruta:inst17|fruta_x[0]         ; Merged with GeradorFruta:inst17|lfsr_x[1]  ;
+; GeradorFruta:inst17|fruta_y[3]         ; Merged with GeradorFruta:inst17|lfsr_y[4]  ;
+; GeradorFruta:inst17|fruta_y[2]         ; Merged with GeradorFruta:inst17|lfsr_y[3]  ;
+; GeradorFruta:inst17|fruta_y[1]         ; Merged with GeradorFruta:inst17|lfsr_y[2]  ;
+; GeradorFruta:inst17|lfsr_y[1]          ; Merged with GeradorFruta:inst17|fruta_y[0] ;
+; Total Number of Removed Registers = 40 ;                                            ;
++----------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -551,6 +563,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------+-------+------+----------------------+
 ; MESSAGE_DISABLE ; 13410 ; -    ; -                    ;
 +-----------------+-------+------+----------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_drvr:inst1 ;
++-----------------+-------+-----------------------------------+
+; Parameter Name  ; Value ; Type                              ;
++-----------------+-------+-----------------------------------+
+; h_back_porch    ; 48    ; Signed Integer                    ;
+; h_display       ; 640   ; Signed Integer                    ;
+; h_front_porch   ; 16    ; Signed Integer                    ;
+; h_retrace       ; 96    ; Signed Integer                    ;
+; v_back_porch    ; 33    ; Signed Integer                    ;
+; v_display       ; 480   ; Signed Integer                    ;
+; v_front_porch   ; 10    ; Signed Integer                    ;
+; v_retrace       ; 2     ; Signed Integer                    ;
+; color_bits      ; 4     ; Signed Integer                    ;
+; h_sync_polarity ; '0'   ; Enumerated                        ;
+; v_sync_polarity ; '0'   ; Enumerated                        ;
+; h_counter_size  ; 10    ; Signed Integer                    ;
+; v_counter_size  ; 10    ; Signed Integer                    ;
++-----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CorDecoder:inst11 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; cor_bits       ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------+
@@ -840,6 +884,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: EnderecamentoSnake:inst10 ;
++-----------------+-------+----------------------------------------------+
+; Parameter Name  ; Value ; Type                                         ;
++-----------------+-------+----------------------------------------------+
+; c_bits          ; 10    ; Signed Integer                               ;
+; l_bits          ; 10    ; Signed Integer                               ;
+; end_bits        ; 8     ; Signed Integer                               ;
+; max_col_display ; 640   ; Signed Integer                               ;
+; max_lin_display ; 480   ; Signed Integer                               ;
+; end_y_max       ; 16    ; Signed Integer                               ;
+; end_x_max       ; 16    ; Signed Integer                               ;
++-----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                                          ;
 +-------------------------------------------------+-------------------------------------------------------+----------------+
@@ -973,14 +1033,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
+; boundary_port         ; 49                          ;
 ; cycloneiii_ff         ; 78                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     plain             ; 46                          ;
-; cycloneiii_lcell_comb ; 114                         ;
+; cycloneiii_lcell_comb ; 116                         ;
 ;     arith             ; 30                          ;
 ;         2 data inputs ; 30                          ;
-;     normal            ; 84                          ;
+;     normal            ; 86                          ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 51                          ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 9                           ;
@@ -988,7 +1049,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.71                        ;
+; Average LUT depth     ; 1.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1053,11 +1114,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 17 21:42:23 2025
+    Info: Processing started: Tue Nov 18 17:48:30 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off snake-game-fpga -c snake-game-fpga
-Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file vga_drvr.vhd
+    Info (12022): Found design unit 1: VGA_drvr-behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/VGA_drvr.vhd Line: 98
+    Info (12023): Found entity 1: VGA_drvr File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/VGA_drvr.vhd Line: 52
+Warning (12019): Can't analyze file -- file Enderecamento.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file sentido.vhd
     Info (12022): Found design unit 1: sentido-SYN File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/sentido.vhd Line: 52
     Info (12023): Found entity 1: sentido File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/sentido.vhd Line: 42
@@ -1070,18 +1134,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file counter
     Info (12022): Found design unit 1: counter-SYN File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/counter.vhd Line: 51
     Info (12023): Found entity 1: counter File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/counter.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file debouncer.vhd
-    Info (12022): Found design unit 1: debouncer-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/debouncer.vhd Line: 19
-    Info (12023): Found entity 1: debouncer File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/debouncer.vhd Line: 5
+    Info (12022): Found design unit 1: debouncer-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/debouncer.vhd Line: 21
+    Info (12023): Found entity 1: debouncer File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/debouncer.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/gerador_fruta.vhd
-    Info (12022): Found design unit 1: GeradorFruta-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 17
-    Info (12023): Found entity 1: GeradorFruta File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 5
+    Info (12022): Found design unit 1: GeradorFruta-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 19
+    Info (12023): Found entity 1: GeradorFruta File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 7
 Info (12021): Found 2 design units, including 0 entities, in source file output_files/log2bits.vhd
     Info (12022): Found design unit 1: log2bits File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/log2bits.vhd Line: 5
     Info (12022): Found design unit 2: log2bits-body File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/log2bits.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file highscore_mem.vhd
-    Info (12022): Found design unit 1: highscore_mem-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 15
-    Info (12023): Found entity 1: highscore_mem File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 5
+    Info (12022): Found design unit 1: highscore_mem-Behavioral File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 17
+    Info (12023): Found entity 1: highscore_mem File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file enderecamentosnake.vhd
+    Info (12022): Found design unit 1: EnderecamentoSnake-comportamento File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/EnderecamentoSnake.vhd Line: 23
+    Info (12023): Found entity 1: EnderecamentoSnake File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/EnderecamentoSnake.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/cor_decoder.vhd
+    Info (12022): Found design unit 1: CorDecoder-comportamento File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd Line: 23
+    Info (12023): Found entity 1: CorDecoder File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd Line: 11
+Info (12021): Found 3 design units, including 1 entities, in source file output_files/snakecontroller.vhd
+    Info (12022): Found design unit 1: snakePackage File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 5
+    Info (12022): Found design unit 2: snakeController-snakeController File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 48
+    Info (12023): Found entity 1: snakeController File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 16
 Info (12127): Elaborating entity "snake-game-fpga" for the top level hierarchy
+Info (12128): Elaborating entity "VGA_drvr" for hierarchy "VGA_drvr:inst1"
+Info (12128): Elaborating entity "CorDecoder" for hierarchy "CorDecoder:inst11"
+Warning (10620): VHDL warning at cor_decoder.vhd(33): comparison between unequal length operands always returns FALSE File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd Line: 33
+Warning (10620): VHDL warning at cor_decoder.vhd(37): comparison between unequal length operands always returns FALSE File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd Line: 37
+Warning (10620): VHDL warning at cor_decoder.vhd(41): comparison between unequal length operands always returns FALSE File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/cor_decoder.vhd Line: 41
 Warning (12125): Using design file decoder7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: decoder7seg-SYN File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/decoder7seg.vhd Line: 52
     Info (12023): Found entity 1: decoder7seg File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/decoder7seg.vhd Line: 42
@@ -1149,14 +1228,18 @@ Info (12128): Elaborating entity "sentido_sm" for hierarchy "sentido_sm:inst2"
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst14"
 Info (12128): Elaborating entity "GeradorFruta" for hierarchy "GeradorFruta:inst17"
 Info (12128): Elaborating entity "highscore_mem" for hierarchy "highscore_mem:inst28"
-Warning (10492): VHDL Process Statement warning at highscore_mem.vhd(23): signal "high_score_current" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at highscore_mem.vhd(26): signal "high_score_current" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 26
-Warning (10631): VHDL Process Statement warning at highscore_mem.vhd(21): inferring latch(es) for signal or variable "high_score_current", which holds its previous value in one or more paths through the process File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-Info (10041): Inferred latch for "high_score_current[0]" at highscore_mem.vhd(21) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-Info (10041): Inferred latch for "high_score_current[1]" at highscore_mem.vhd(21) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-Info (10041): Inferred latch for "high_score_current[2]" at highscore_mem.vhd(21) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-Info (10041): Inferred latch for "high_score_current[3]" at highscore_mem.vhd(21) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Warning (10492): VHDL Process Statement warning at highscore_mem.vhd(29): signal "high_score_current" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 29
+Warning (10631): VHDL Process Statement warning at highscore_mem.vhd(24): inferring latch(es) for signal or variable "high_score_current", which holds its previous value in one or more paths through the process File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+Info (10041): Inferred latch for "high_score_current[0]" at highscore_mem.vhd(24) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+Info (10041): Inferred latch for "high_score_current[1]" at highscore_mem.vhd(24) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+Info (10041): Inferred latch for "high_score_current[2]" at highscore_mem.vhd(24) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+Info (10041): Inferred latch for "high_score_current[3]" at highscore_mem.vhd(24) File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+Info (12128): Elaborating entity "EnderecamentoSnake" for hierarchy "EnderecamentoSnake:inst10"
+Info (12128): Elaborating entity "snakeController" for hierarchy "snakeController:inst12"
+Warning (10541): VHDL Signal Declaration warning at snakeController.vhd(36): used implicit default value for signal "sinalComida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 36
+Warning (10541): VHDL Signal Declaration warning at snakeController.vhd(39): used implicit default value for signal "tamanho" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 39
+Warning (10542): VHDL Variable Declaration warning at snakeController.vhd(49): used initial value expression for variable "snakeMatrix" because variable was never assigned a value File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/snakeController.vhd Line: 49
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_ela_trigger_0fp.tdf
     Info (12023): Found entity 1: sld_ela_trigger_0fp File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/db/sld_ela_trigger_0fp.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_reserved_snake_game_fpga_auto_signaltap_0_1_21ea.v
@@ -1181,7 +1264,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.11.17.22:42:51 Progress: Loading sld4d922cac/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.11.18.18:48:58 Progress: Loading sld4d922cac/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1204,14 +1287,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/db/ip/sld4d922cac/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d922cac/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/db/ip/sld4d922cac/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (13012): Latch highscore_mem:inst28|high_score_current[0] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|fruta_y[0] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 31
-Warning (13012): Latch highscore_mem:inst28|high_score_current[1] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[2] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 31
-Warning (13012): Latch highscore_mem:inst28|high_score_current[2] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[3] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 31
-Warning (13012): Latch highscore_mem:inst28|high_score_current[3] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[4] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 31
+Warning (13012): Latch highscore_mem:inst28|high_score_current[0] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|fruta_y[0] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 33
+Warning (13012): Latch highscore_mem:inst28|high_score_current[1] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[2] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 33
+Warning (13012): Latch highscore_mem:inst28|high_score_current[2] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[3] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 33
+Warning (13012): Latch highscore_mem:inst28|high_score_current[3] has unsafe behavior File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/highscore_mem.vhd Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal GeradorFruta:inst17|lfsr_y[4] File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/output_files/gerador_fruta.vhd Line: 33
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_HS" is stuck at VCC
+    Warning (13410): Pin "VGA_VS" is stuck at VCC
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "decoder7seg:inst4|altsyncram:altsyncram_component|altsyncram_57q3:auto_generated|ALTSYNCRAM" File: C:/Users/gusta/Documents/Faculdade/10o_semestre/LogicRec/snake-game-fpga/db/altsyncram_57q3.tdf Line: 31
 Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Default" -- entity does not exist in design
@@ -1427,15 +1525,15 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Default" -- entit
 Critical Warning (35025): Partially connected in-system debug instance "auto_signaltap_0" to 35 of its 38 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 3 missing sources or connections.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 752 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 766 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 33 output pins
+    Info (21059): Implemented 47 output pins
     Info (21061): Implemented 676 logic cells
     Info (21064): Implemented 36 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 227 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Mon Nov 17 21:43:15 2025
-    Info: Elapsed time: 00:00:52
-    Info: Total CPU time (on all processors): 00:01:33
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 247 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue Nov 18 17:49:23 2025
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:01:29
 
 
