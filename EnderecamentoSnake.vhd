@@ -34,7 +34,7 @@ begin
 			if rising_edge(clock) then
 				auxlinha <= to_integer(unsigned(linha));
 				auxcoluna <= to_integer(unsigned(coluna));
-				auxadd <= (END_X_MAX-auxlinha/downsize_X)*(END_Y_MAX+auxcoluna/downsize_y);
+				auxadd <= (END_X_MAX-auxlinha/downsize_X)*END_Y_MAX+auxcoluna/downsize_y;
 				address <=  std_logic_vector(to_unsigned(auxadd, END_BITS));
 			end if;
 		

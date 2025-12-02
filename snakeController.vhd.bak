@@ -1,0 +1,168 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+package snakePackage is
+    type matrix is array(0 to 15, 0 to 15) of integer;
+end snakePackage;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.snakePackage.all;
+
+entity snakeController is
+    port(
+        reset: in std_logic;
+        clk: in std_logic;
+        frameTick: in std_logic;
+
+        -- 00 - cima
+        -- 01 - direita
+        -- 10 - baixo
+        -- 11 - esquerda
+        sentido: in std_logic_vector(1 downto 0);
+
+        -- coordenadas da comida a ser gerada no tabuleiro
+        comidaPronta: in std_logic;
+        comidaX: in unsigned(3 downto 0);
+        comidaY: in unsigned(3 downto 0);
+
+        -- coordenadas do tabuleiro sendo pedida pelo driver vga
+        pixelX: in unsigned(3 downto 0);
+        pixelY: in unsigned(3 downto 0);
+
+        -- sinal a ser emitido quando precisa gerar uma nova coordenada pra comida
+        criarComida: out std_logic;
+
+        -- tamanho da cobra/pontuacao para ser exibido nos displays
+        tamanho: out std_logic_vector(7 downto 0);
+
+        -- 00 - vazio
+        -- 01 - segmento cobra
+        -- 10 - comida
+        pixelOut: out std_logic_vector(1 downto 0)
+    );
+end snakeController;
+
+architecture snakeController of snakeController is
+
+signal tamanhoSignal : integer := 1;
+
+signal snakeMatrix : matrix :=
+(
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+);
+begin
+
+-- reset, geracao de comida e movimentacao da cobra
+process (clk)
+    variable headX : integer := 8;
+    variable headY : integer := 7;
+    variable newHeadX : integer;
+    variable newHeadY : integer;
+    variable prevFrameTick : std_logic := '0';
+begin
+    if rising_edge(clk) then
+        -- reset sincrono
+        if reset = '1' then
+            -- reseta tamanho
+            tamanhoSignal <= 1;
+            -- reseta posicao da cabeca
+            headX := 8;
+            headY := 7;
+            -- envia sinal para criar comida e reseta matriz
+            criarComida <= '1';
+            snakeMatrix <= 
+            (
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
+            (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+            );
+        else
+            -- geracao de comida
+            if comidaPronta = '1' then
+                if snakeMatrix(to_integer(comidaY), to_integer(comidaX)) = 0 then
+                    criarComida <= '0';
+                    snakeMatrix(to_integer(comidaY), to_integer(comidaX)) <= 2;
+                else
+                    criarComida <= '1';
+                end if;
+            end if;
+
+            -- detecta risignEdge do clock de frame
+            if (prevFrameTick = '0') and (frameTick = '1') then
+                -- calcula a nova posicao da cabeca
+                case sentido is
+                    when "00" =>  -- cima
+                        newHeadX := headX;
+                        newHeadY := (headY - 1 + 16) mod 16;
+                    when "01" =>  -- direita
+                        newHeadX := (headX + 1) mod 16;
+                        newHeadY := headY;
+                    when "10" =>  -- baixo
+                        newHeadX := headX;
+                        newHeadY := (headY + 1) mod 16;
+                    when others =>  -- esquerda
+                        newHeadX := (headX - 1 + 16) mod 16;
+                        newHeadY := headY;
+                end case;
+
+                -- se a nova posicao for comida
+                if snakeMatrix(newHeadY, newHeadX) = 2 then
+                    tamanhoSignal <= tamanhoSignal + 1;
+                    criarComida <= '1';  -- sinaliza para criar nova comida
+                end if;
+
+                -- atualiza a matriz da cobra (logica simplificada, sem colisao ou crescimento)
+                snakeMatrix(newHeadY, newHeadX) <= 1;
+                snakeMatrix(headY, headX) <= 0;  -- remove a cauda (simplificacao)
+
+                -- atualiza a posicao da cabeca
+                headX := newHeadX;
+                headY := newHeadY;
+            end if;
+        end if;
+
+        -- atualiza o prevFrameTick
+        prevFrameTick := frameTick;
+    end if;
+end process;
+
+tamanho <= std_logic_vector(to_unsigned(tamanhoSignal, 8));
+
+pixelOut <= std_logic_vector(
+    to_unsigned(snakeMatrix(
+        to_integer(pixelY),
+        to_integer(pixelX)
+), 2));
+
+end snakeController;

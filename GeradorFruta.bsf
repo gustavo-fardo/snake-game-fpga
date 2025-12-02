@@ -26,9 +26,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "clk_gera" (rect 0 0 34 12)(font "Arial" ))
-		(text "clk_gera" (rect 21 27 55 39)(font "Arial" ))
+		(text "enable" (rect 0 0 24 12)(font "Arial" ))
+		(text "enable" (rect 21 27 45 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk_gera" (rect 0 0 34 12)(font "Arial" ))
+		(text "clk_gera" (rect 21 43 55 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 184 32)

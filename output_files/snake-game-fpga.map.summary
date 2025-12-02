@@ -1,16 +1,16 @@
-Analysis & Synthesis Status : Successful - Tue Nov 18 17:49:23 2025
+Analysis & Synthesis Status : Successful - Tue Nov 25 18:05:03 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : snake-game-fpga
 Top-level Entity Name : snake-game-fpga
 Family : MAX 10
-Total logic elements : 662
-    Total combinational functions : 499
-    Dedicated logic registers : 469
-Total registers : 469
-Total pins : 49
+Total logic elements : 3,526
+    Total combinational functions : 3,272
+    Dedicated logic registers : 1,190
+Total registers : 1190
+Total pins : 69
 Total virtual pins : 0
-Total memory bits : 928
+Total memory bits : 3,072
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
 UFM blocks : 0
 ADC blocks : 0

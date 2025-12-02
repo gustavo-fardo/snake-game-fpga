@@ -13,7 +13,7 @@ entity CorDecoder is
 		COR_BITS : in natural := 4
 	);
    port( 
-      valor_pixel : in std_logic_vector (2 downto 0);
+      valor_pixel : in std_logic_vector (1 downto 0);
 		valor_verm : out std_logic_vector (COR_BITS-1 downto 0);
 		valor_verde : out std_logic_vector (COR_BITS-1 downto 0);
 		valor_azul : out std_logic_vector (COR_BITS-1 downto 0)
@@ -25,15 +25,15 @@ architecture comportamento of CorDecoder is
  -- Componente de cor zerada
 constant zero : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned(0, COR_BITS));
 -- Componente de cor completa
-constant full : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned(2**COR_BITS, COR_BITS));
+constant full : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned((2**COR_BITS-1), COR_BITS));
 
 begin
 		process(valor_pixel)
 		begin
 			if valor_pixel = "00" then 	-- Fundo
-				valor_verm <= zero;
-				valor_verde <= zero;
-				valor_azul <= zero;
+				valor_verm <= full;
+				valor_verde <= full;
+				valor_azul <= full;
 			elsif valor_pixel = "01" then -- Cobra
 				valor_verm <= zero;
 				valor_verde <= full;

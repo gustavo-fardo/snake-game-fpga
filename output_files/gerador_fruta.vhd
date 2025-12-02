@@ -10,6 +10,7 @@ entity GeradorFruta is
 		  N : natural := 20 -- Coordenada máxima no eixo Y
 	 );
     Port (
+		  enable : in std_logic;
 		  clk_gera : in std_logic;
 		  fruta_x : out std_logic_vector(3 downto 0);
 		  fruta_y : out std_logic_vector(3 downto 0)
@@ -30,7 +31,7 @@ begin
         variable rnd_x      : integer;
         variable rnd_y      : integer;
     begin
-        if rising_edge(clk_gera) then
+        if rising_edge(clk_gera) and enable = '1' then
 
 				-- Utiliza Shift Registers de Feedback Linear para a geração de inteiros
 				-- pseudoaleatorios a partir de seeds
