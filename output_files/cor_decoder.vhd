@@ -26,14 +26,16 @@ architecture comportamento of CorDecoder is
 constant zero : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned(0, COR_BITS));
 -- Componente de cor completa
 constant full : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned((2**COR_BITS-1), COR_BITS));
+-- Componente cor parcial
+constant part : std_logic_vector (COR_BITS-1 downto 0) := std_logic_vector(to_unsigned(8, COR_BITS));
 
 begin
 		process(valor_pixel)
 		begin
 			if valor_pixel = "00" then 	-- Fundo
-				valor_verm <= full;
-				valor_verde <= full;
-				valor_azul <= full;
+				valor_verm <= zero;
+				valor_verde <= part;
+				valor_azul <= zero;
 			elsif valor_pixel = "01" then -- Cobra
 				valor_verm <= zero;
 				valor_verde <= full;
@@ -42,10 +44,10 @@ begin
 				valor_verm <= full;
 				valor_verde <= zero;
 				valor_azul <= zero;
-			else 									-- Valor inesperado
-				valor_verm <= full;
+			else 									-- Valor outOfBounds
+				valor_verm <= zero;
 				valor_verde <= zero;
-				valor_azul <= full;
+				valor_azul <= zero;
 			end if;
 		
 		end process;

@@ -17,7 +17,7 @@ end highscore_mem;
 architecture Behavioral of highscore_mem is
 
 	 -- Sinal auxiliar do High Score para comparacao com a entrada
-    signal high_score_current : std_logic_vector(N_BITS-1 downto 0) := score; 
+    signal high_score_current : std_logic_vector(N_BITS-1 downto 0) := (others => '0'); 
 	 
 begin
 

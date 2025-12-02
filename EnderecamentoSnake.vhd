@@ -16,7 +16,8 @@ entity EnderecamentoSnake is
       clock		:	in std_logic;
 		coluna : in std_logic_vector(C_BITS-1 downto 0);
 		linha : in std_logic_vector(L_BITS-1 downto 0);
-		address: out std_logic_vector(END_BITS-1 downto 0)
+		address: out std_logic_vector(END_BITS-1 downto 0);
+		outOfBounds : out std_logic
 	);
 end entity EnderecamentoSnake;
 
@@ -26,7 +27,9 @@ signal auxlinha :	INTEGER RANGE 0 to MAX_LIN_DISPLAY;
 signal auxcoluna :	INTEGER RANGE 0 to MAX_COL_DISPLAY;
 signal auxadd : INTEGER RANGE 0 to MAX_LIN_DISPLAY*MAX_COL_DISPLAY;
 constant downsize_X : INTEGER := MAX_LIN_DISPLAY/END_X_MAX;
-constant downsize_y : INTEGER := MAX_COL_DISPLAY/END_Y_MAX;
+constant downsize_y : INTEGER := downsize_x;-- MAX_COL_DISPLAY/END_Y_MAX;
+constant left_bound : INTEGER := (MAX_COL_DISPLAY-MAX_LIN_DISPLAY)/2;
+constant right_bound : INTEGER := MAX_LIN_DISPLAY+(MAX_COL_DISPLAY-MAX_LIN_DISPLAY)/2;
 
 begin
 		process(clock)
@@ -34,8 +37,14 @@ begin
 			if rising_edge(clock) then
 				auxlinha <= to_integer(unsigned(linha));
 				auxcoluna <= to_integer(unsigned(coluna));
-				auxadd <= (END_X_MAX-auxlinha/downsize_X)*END_Y_MAX+auxcoluna/downsize_y;
-				address <=  std_logic_vector(to_unsigned(auxadd, END_BITS));
+				
+				if auxcoluna < left_bound or auxcoluna > right_bound then
+					outOfBounds <= '1';
+				else
+					outOfBounds <= '0';
+					auxadd <= (END_X_MAX-1-auxlinha/downsize_X)*END_Y_MAX+(auxcoluna-left_bound)/downsize_y;
+					address <=  std_logic_vector(to_unsigned(auxadd, END_BITS));
+				end if;
 			end if;
 		
 		end process;

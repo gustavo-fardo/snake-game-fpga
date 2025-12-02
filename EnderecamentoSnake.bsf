@@ -51,6 +51,13 @@ refer to the applicable agreement for further details.
 		(text "address[end_bits-1..0]" (rect 149 27 235 39)(font "Arial" ))
 		(line (pt 256 32)(pt 240 32)(line_width 3))
 	)
+	(port
+		(pt 256 48)
+		(output)
+		(text "outOfBounds" (rect 0 0 51 12)(font "Arial" ))
+		(text "outOfBounds" (rect 184 43 235 55)(font "Arial" ))
+		(line (pt 256 48)(pt 240 48)(line_width 1))
+	)
 	(parameter
 		"C_BITS"
 		"10"
