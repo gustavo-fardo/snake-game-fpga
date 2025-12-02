@@ -91,7 +91,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -408 448 -240 464)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[1]" (rect 5 0 35 17)(font "Intel Clear" ))
+	(text "SW[1]" (rect 5 0 34 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -108,7 +108,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -408 488 -240 504)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[9..2]" (rect 5 0 46 17)(font "Intel Clear" ))
+	(text "SW[9..2]" (rect 5 0 45 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -943,7 +943,7 @@ refer to the applicable agreement for further details.
 	(annotation_block (parameter)(rect 824 248 993 286))
 )
 (symbol
-	(rect 184 440 368 520)
+	(rect 184 424 368 504)
 	(text "GeradorFruta" (rect 5 0 69 12)(font "Arial" ))
 	(text "inst17" (rect 8 64 37 76)(font "Arial" ))
 	(port
@@ -987,7 +987,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 168 64))
 	)
-	(annotation_block (parameter)(rect 184 520 353 577))
+	(annotation_block (parameter)(rect 184 504 353 561))
 )
 (symbol
 	(rect 56 688 104 720)
@@ -1091,21 +1091,21 @@ refer to the applicable agreement for further details.
 		(pt 264 32)
 		(output)
 		(text "valor_verm[cor_bits-1..0]" (rect 0 0 125 12)(font "Arial" ))
-		(text "valor_verm[cor_bits-1..0]" (rect 138 27 243 39)(font "Arial" ))
+		(text "valor_verm[cor_bits-1..0]" (rect 138 27 263 39)(font "Arial" ))
 		(line (pt 264 32)(pt 248 32)(line_width 3))
 	)
 	(port
 		(pt 264 48)
 		(output)
 		(text "valor_verde[cor_bits-1..0]" (rect 0 0 127 12)(font "Arial" ))
-		(text "valor_verde[cor_bits-1..0]" (rect 136 43 243 55)(font "Arial" ))
+		(text "valor_verde[cor_bits-1..0]" (rect 136 43 263 55)(font "Arial" ))
 		(line (pt 264 48)(pt 248 48)(line_width 3))
 	)
 	(port
 		(pt 264 64)
 		(output)
 		(text "valor_azul[cor_bits-1..0]" (rect 0 0 118 12)(font "Arial" ))
-		(text "valor_azul[cor_bits-1..0]" (rect 144 59 243 71)(font "Arial" ))
+		(text "valor_azul[cor_bits-1..0]" (rect 144 59 262 71)(font "Arial" ))
 		(line (pt 264 64)(pt 248 64)(line_width 3))
 	)
 	(parameter
@@ -1117,98 +1117,6 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 248 96))
 	)
 	(annotation_block (parameter)(rect -136 648 40 688))
-)
-(symbol
-	(rect 448 360 656 568)
-	(text "snakeController" (rect 5 0 81 12)(font "Arial" ))
-	(text "inst12" (rect 8 192 37 204)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 27 45 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "frameTick" (rect 0 0 49 12)(font "Arial" ))
-		(text "frameTick" (rect 21 59 70 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "sentido[1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "sentido[1..0]" (rect 21 75 82 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "comidaPronta" (rect 0 0 67 12)(font "Arial" ))
-		(text "comidaPronta" (rect 21 91 88 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "comidaX[3..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "comidaX[3..0]" (rect 21 107 88 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "comidaY[3..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "comidaY[3..0]" (rect 21 123 90 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "pixelX[3..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "pixelX[3..0]" (rect 21 139 75 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "pixelY[3..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "pixelY[3..0]" (rect 21 155 77 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "criarComida" (rect 0 0 59 12)(font "Arial" ))
-		(text "criarComida" (rect 138 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32))
-	)
-	(port
-		(pt 208 48)
-		(output)
-		(text "tamanho[7..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "tamanho[7..0]" (rect 130 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 3))
-	)
-	(port
-		(pt 208 64)
-		(output)
-		(text "pixelOut[1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "pixelOut[1..0]" (rect 132 59 187 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 192))
-	)
 )
 (symbol
 	(rect -136 40 8 104)
@@ -1247,7 +1155,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 152 456 184 472)
+	(rect 152 440 184 456)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
 	(text "inst26" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
 	(port
@@ -1332,6 +1240,91 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 240 96))
 	)
 	(annotation_block (parameter)(rect 712 784 929 936))
+)
+(symbol
+	(rect 448 360 656 536)
+	(text "snakeController" (rect 5 0 81 12)(font "Arial" ))
+	(text "inst12" (rect 8 160 37 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 27 45 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "frameTick" (rect 0 0 49 12)(font "Arial" ))
+		(text "frameTick" (rect 21 59 70 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "sentido[1..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "sentido[1..0]" (rect 21 75 82 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "comidaX[3..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "comidaX[3..0]" (rect 21 91 88 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "comidaY[3..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "comidaY[3..0]" (rect 21 107 90 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "pixelX[3..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "pixelX[3..0]" (rect 21 123 75 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "pixelY[3..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "pixelY[3..0]" (rect 21 139 77 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "criarComida" (rect 0 0 59 12)(font "Arial" ))
+		(text "criarComida" (rect 138 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "tamanho[7..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "tamanho[7..0]" (rect 130 43 187 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "pixelOut[1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "pixelOut[1..0]" (rect 132 59 187 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 160))
+	)
 )
 (connector
 	(pt 112 296)
@@ -1440,10 +1433,6 @@ refer to the applicable agreement for further details.
 	(pt -192 336)
 )
 (connector
-	(pt 168 472)
-	(pt 184 472)
-)
-(connector
 	(text "sentido[1..0]" (rect 400 424 457 441)(font "Intel Clear" ))
 	(pt 448 440)
 	(pt 400 440)
@@ -1468,10 +1457,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 176 312)
 	(pt 176 392)
-)
-(connector
-	(pt 680 600)
-	(pt 168 600)
 )
 (connector
 	(pt 680 600)
@@ -1542,18 +1527,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "fruta_x[3..0]" (rect 378 456 434 473)(font "Intel Clear" ))
-	(pt 448 472)
-	(pt 368 472)
-	(bus)
-)
-(connector
-	(text "fruta_y[3..0]" (rect 378 472 435 489)(font "Intel Clear" ))
-	(pt 448 488)
-	(pt 368 488)
-	(bus)
-)
-(connector
 	(pt 1232 384)
 	(pt 1232 480)
 )
@@ -1619,18 +1592,6 @@ refer to the applicable agreement for further details.
 	(text "enderecamento[7..0]" (rect 936 688 1033 705)(font "Intel Clear" ))
 	(pt 936 704)
 	(pt 968 704)
-	(bus)
-)
-(connector
-	(text "enderecamento[7..4]" (rect 368 488 465 505)(font "Intel Clear" ))
-	(pt 400 504)
-	(pt 448 504)
-	(bus)
-)
-(connector
-	(text "enderecamento[3..0]" (rect 368 504 465 521)(font "Intel Clear" ))
-	(pt 448 520)
-	(pt 400 520)
 	(bus)
 )
 (connector
@@ -1703,10 +1664,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -240 456)
-	(pt 448 456)
-)
-(connector
 	(pt -160 256)
 	(pt -160 384)
 )
@@ -1760,14 +1717,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 112 296)
 	(pt 184 296)
-)
-(connector
-	(pt 168 488)
-	(pt 168 600)
-)
-(connector
-	(pt 168 488)
-	(pt 184 488)
 )
 (connector
 	(text "highscore[7..0]" (rect 1088 296 1156 313)(font "Intel Clear" ))
@@ -1834,6 +1783,46 @@ refer to the applicable agreement for further details.
 	(pt 1096 616)
 	(pt 1096 856)
 	(bus)
+)
+(connector
+	(pt 680 600)
+	(pt 168 600)
+)
+(connector
+	(pt 168 600)
+	(pt 168 472)
+)
+(connector
+	(pt 168 472)
+	(pt 184 472)
+)
+(connector
+	(text "enderecamento[7..4]" (rect 368 472 465 489)(font "Intel Clear" ))
+	(pt 448 488)
+	(pt 400 488)
+	(bus)
+)
+(connector
+	(text "enderecamento[3..0]" (rect 368 488 465 505)(font "Intel Clear" ))
+	(pt 448 504)
+	(pt 400 504)
+	(bus)
+)
+(connector
+	(text "fruta_x[3..0]" (rect 378 440 434 457)(font "Intel Clear" ))
+	(pt 368 456)
+	(pt 448 456)
+	(bus)
+)
+(connector
+	(text "fruta_y[3..0]" (rect 378 456 435 473)(font "Intel Clear" ))
+	(pt 368 472)
+	(pt 448 472)
+	(bus)
+)
+(connector
+	(pt 168 456)
+	(pt 184 456)
 )
 (junction (pt 112 144))
 (junction (pt -176 232))
